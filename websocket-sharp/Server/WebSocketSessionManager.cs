@@ -62,7 +62,7 @@ namespace WebSocketSharp.Server
 
     #region Internal Constructors
 
-    internal WebSocketSessionManager (Logger log)
+    public WebSocketSessionManager (Logger log)
     {
       _log = log;
 
@@ -529,7 +529,7 @@ namespace WebSocketSharp.Server
         return _sessions.Remove (id);
     }
 
-    internal void Start ()
+    public void Start ()
     {
       lock (_sync) {
         _sweepTimer.Enabled = _clean;

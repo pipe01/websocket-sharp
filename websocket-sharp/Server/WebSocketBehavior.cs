@@ -348,7 +348,12 @@ namespace WebSocketSharp.Server
 
     #region Internal Methods
 
-    internal void Start (WebSocketContext context, WebSocketSessionManager sessions)
+        /// <summary>
+        /// Starts a websocket behaviour on a given <see cref="WebSocketContext"/>.
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="sessions"></param>
+    public void Start (WebSocketContext context, WebSocketSessionManager sessions)
     {
       if (_websocket != null) {
         _websocket.Log.Error ("A session instance cannot be reused.");
